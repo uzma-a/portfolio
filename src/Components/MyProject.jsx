@@ -41,8 +41,20 @@ const ProjectsShowcase = () => {
       github: "https://github.com/uzma-a/Study-Buddy",
       category: "Frontend"
     },
-    {
+     {
       id: 4,
+      name: "Slice-Hub Pizza",
+      title: "Full-Stack Pizza Ordering App",
+      description: "A full-stack pizza ordering website featuring an interactive frontend and a robust backend for managing orders efficiently. update it for my portfolio",
+      skills: ["JavaScript", "MySQL ", "Payment gateway", "Razorpay Integration" ,"React.js", "React Toastify"],
+      icon: <Zap className="w-8 h-8" />,
+      gradient: "from-gray-400 via-blue-400 to-purple-400",
+      liveDemo: "https://slice-hub-pizza.vercel.app/",
+      github: "https://github.com/uzma-a/SliceHub",
+      category: "Full Stack"
+    },
+    {
+      id: 5,
       name: "Musicify",
       title: "Music Player Application",
       description: "Sleek and responsive music player with categorized playlists, global audio controls, and smooth user experience.",
@@ -54,7 +66,7 @@ const ProjectsShowcase = () => {
       category: "Frontend"
     },
     {
-      id: 5,
+      id: 6,
       name: "FitHub",
       title: "Modern Responsive Gym Website",
       description: "Contemporary gym website with membership plans, registration functionality, and appointment booking system.",
@@ -66,7 +78,7 @@ const ProjectsShowcase = () => {
       category: "Full Stack"
     },
       {
-      id: 8,
+      id: 7,
       name: "Eventify",
       title: "Event Management Platform",
       description: "Full-stack platform for seamless event organization with secure authentication and ticket booking system.",
