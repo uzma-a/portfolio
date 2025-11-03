@@ -69,7 +69,7 @@ const skillsData = [
     title: 'Artificial Intelligence',
     color: 'from-violet-500 via-fuchsia-500 to-pink-500',
     icon: '🤖',
-    skills: ['Claude', 'ChatGPT', 'Cursor AI', 'AssemblyAI'],
+    skills: ['Claude', 'ChatGPT', 'Cursor AI', 'n8n'],
     description: 'AI-powered tools for enhanced productivity',
     level: 83
   },
