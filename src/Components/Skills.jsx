@@ -1,6 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Palette, Server, Database, Figma, GitBranch, Wrench, Rocket, Brain } from 'lucide-react';
 
+
+const skillsData = [
+  {
+    title: 'Programming Languages',
+    color: 'from-purple-500 via-indigo-500 to-blue-500',
+    icon: '💻',
+    skills: ['JavaScript', 'Python'],
+    description: 'Core programming languages for versatile development',
+    level: 90
+  },
+  {
+    title: 'Frontend',
+    color: 'from-pink-500 via-rose-500 to-red-500',
+    icon: '🎨',
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'TailwindCSS', 'Bootstrap', 'React.js', 'Redux', 'Next.js'],
+    description: 'Modern frontend technologies for stunning user interfaces',
+    level: 95
+  },
+  {
+    title: 'Backend',
+    color: 'from-green-500 via-emerald-500 to-teal-500',
+    icon: '🛠️',
+    skills: ['Node.js', 'Express.js', 'Django', 'Django REST Framework', 'Firebase Functions'],
+    description: 'Server-side technologies for robust applications',
+    level: 85
+  },
+  {
+    title: 'Database',
+    color: 'from-yellow-500 via-orange-500 to-red-500',
+    icon: '🗄️',
+    skills: ['MongoDB', 'MySQL' ,'Firebase Firestore'],
+    description: 'Database solutions for scalable data management',
+    level: 80
+  },
+  {
+    title: 'UI/UX Design',
+    color: 'from-cyan-500 via-blue-500 to-indigo-500',
+    icon: '🎯',
+    skills: ['Figma', 'Responsive Design'],
+    description: 'Design thinking for exceptional user experiences',
+    level: 88
+  },
+  {
+    title: 'Version Control',
+    color: 'from-teal-500 via-cyan-500 to-sky-500',
+    icon: '🔧',
+    skills: ['Git', 'GitHub'],
+    description: 'Code versioning and collaboration tools',
+    level: 92
+  },
+  {
+    title: 'Additional Tools',
+    color: 'from-indigo-500 via-purple-500 to-pink-500',
+    icon: '🧰',
+    skills: ['REST APIs', 'Redux', 'Postman', 'Socket.io'],
+    description: 'Essential development and testing utilities',
+    level: 87
+  },
+  {
+    title: 'Deployment & Hosting',
+    color: 'from-fuchsia-500 via-purple-500 to-violet-500',
+    icon: '🚀',
+    skills: ['Netlify', 'Vercel', 'Render'],
+    description: 'Modern deployment platforms for seamless launches',
+    level: 89
+  },
+  {
+    title: 'Artificial Intelligence',
+    color: 'from-violet-500 via-fuchsia-500 to-pink-500',
+    icon: '🤖',
+    skills: ['Claude', 'ChatGPT', 'Cursor AI', 'n8n'],
+    description: 'AI-powered tools for enhanced productivity',
+    level: 83
+  },
+];
+
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
 
