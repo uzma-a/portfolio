@@ -10,8 +10,8 @@ import Skills from './Components/Skills';
 import About from './Components/About';
 import MyProject from './Components/MyProject';
 import Main from './Components/Main';
-import Plans from './Components/Plans';
 import { useState, useEffect } from 'react';
+import Certificates from './Components/Certificates';
 
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
                     <About />
                     <Skills />
                     <MyProject />
-                    <Plans />
+                   <Certificates />
                   </>
                 }
               />

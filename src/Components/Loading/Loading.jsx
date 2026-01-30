@@ -35,7 +35,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900 flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Particles */}
