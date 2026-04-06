@@ -74,17 +74,6 @@ const ProjectsShowcase = () => {
       category: "Frontend"
     },
     {
-      id: 7,
-      name: "Slice-Hub Pizza",
-      description: "Full-stack pizza ordering platform with interactive frontend, MySQL database, and integrated Razorpay payment gateway for seamless order management.",
-      skills: ["React.js", "MySQL", "Razorpay", "Payment Gateway"],
-      icon: <Globe className="w-8 h-8" />,
-      gradient: "from-orange-400 via-red-400 to-pink-400",
-      liveDemo: "https://slice-hub-pizza.vercel.app/",
-      github: "https://github.com/uzma-a/SliceHub",
-      category: "Full Stack"
-    },
-    {
       id: 8,
       name: "FitHub",
       description: "Modern gym website built with MERN stack featuring membership plans, user registration, appointment booking system, and responsive TailwindCSS design.",
