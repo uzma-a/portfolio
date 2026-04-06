@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Code, Database, Brain, Sparkles } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,19 +8,10 @@ const About = () => {
     setIsVisible(true);
   }, []);
 
-  const skills = [
-    { icon: '🔥', title: 'PyTorch' },
-    { icon: '🐍', title: 'Python' },
-    { icon: '⚛️', title: 'React' },
-    { icon: '📊', title: 'Kaggle' },
-    { icon: '🎨', title: 'Tailwind' },
-    { icon: '🤖', title: 'ML Models' }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white flex items-center justify-center p-4 relative overflow-hidden">
 
-      {/* Animated Grid Background */}
+      {/* Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
       {/* Gradient Orbs */}
@@ -49,8 +40,9 @@ const About = () => {
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl w-full">
         <div
-          className={`backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl shadow-2xl p-8 md:p-10 transition-all duration-1000 hover:border-white/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-            }`}
+          className={`backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl shadow-2xl p-8 md:p-10 transition-all duration-1000 hover:border-white/20 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          }`}
         >
 
           {/* Header */}
@@ -58,7 +50,7 @@ const About = () => {
             <div className="w-14 h-12 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
               <BookOpen className="w-8 h-8 text-cyan-400" />
             </div>
-            <h2 className="text-4xl md:text-4xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+            <h2 className="text-4xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
               About Me
             </h2>
           </div>
@@ -66,51 +58,54 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6 text-gray-300 leading-relaxed text-base md:text-md">
             <p>
-              I am a <span className="text-cyan-400 font-semibold">Machine Learning practitioner</span> and{" "}
-              <span className="text-purple-400 font-semibold">Full-Stack Developer</span> with hands-on experience building data-driven models and end-to-end web applications.
+              I am a{' '}
+              <span className="text-cyan-400 font-semibold">Machine Learning practitioner</span>,{' '}
+              <span className="text-purple-400 font-semibold">AI Application Builder</span>, and{' '}
+              <span className="text-pink-400 font-semibold">Full-Stack Developer</span> with hands-on
+              experience building intelligent, production-ready systems from scratch.
             </p>
 
             <p>
-              I am currently pursuing a{" "}
-              <span className="text-yellow-400 font-semibold">
-                Bachelor of Computer Applications (BCA)
-              </span>{" "}
-              from{" "}
-              <span className="text-yellow-400 font-semibold">
-                Manipal University Jaipur
-              </span>, where I am strengthening my foundation in computer science, programming, and problem-solving.
+              I am currently pursuing a{' '}
+              <span className="text-yellow-400 font-semibold">Bachelor of Computer Applications (BCA)</span>{' '}
+              from{' '}
+              <span className="text-yellow-400 font-semibold">Manipal University Jaipur</span>, where I am
+              strengthening my foundation in computer science, programming, and problem-solving.
             </p>
 
             <p>
-              On the Machine Learning side, I work with{" "}
+              On the AI and Machine Learning side, I work with{' '}
               <span className="text-cyan-400 font-semibold">
-                PyTorch, Python, and real-world Kaggle datasets
-              </span>, focusing on the complete ML workflow — data preprocessing, feature handling, model training, evaluation, and improvement. I emphasize clean, reproducible pipelines and practical implementation over theory alone.
+                PyTorch, sentence-transformers, HuggingFace, and real-world Kaggle datasets
+              </span>
+              , focusing on the complete pipeline — data preprocessing, model training, NLP, semantic
+              similarity, and deployment.
             </p>
 
             <p>
-              As a Full-Stack Developer, I have built interactive and scalable applications using{" "}
+              I have built end-to-end AI applications like{' '}
+              <span className="text-purple-400 font-semibold">WhyNotHireMe</span> — a hiring transparency
+              system that analyzes resumes against job descriptions using NLP, generates skill gap reports,
+              and sends personalised rejection emails to candidates — and{' '}
+              <span className="text-pink-400 font-semibold">TruthLens</span>, a fake news detection system
+              powered by ML models. Both are fully deployed and production-ready.
+            </p>
+
+            <p>
+              As a Full-Stack Developer, I build scalable applications using{' '}
               <span className="text-purple-400 font-semibold">
-                React, Python, and modern UI frameworks
-              </span>, with a strong focus on performance, user experience, and clean architecture.
-            </p>
-
-            <p>
-              I also practice{" "}
-              <span className="text-pink-400 font-semibold">
-                prompt engineering
-              </span>{" "}
-              to design effective AI interactions and integrate intelligent features into applications.
+                React, Next.js, FastAPI, Django, and PostgreSQL
+              </span>
+              , with strong focus on clean architecture, authentication, database design, and real-world
+              API integrations.
             </p>
 
             <p className="text-gray-400 italic pt-2">
-              I enjoy bridging Machine Learning and Full-Stack development to create intelligent, real-world products, and I am continuously building portfolio-ready projects to deepen my skills and practical understanding.
+              I enjoy bridging AI and Full-Stack development to build products that solve real problems —
+              and I am continuously shipping portfolio-ready projects to deepen both my technical depth
+              and practical understanding.
             </p>
           </div>
-
-
-
-
 
         </div>
       </div>

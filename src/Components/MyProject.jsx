@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Code, Zap, Globe, Music, Dumbbell, Users, Bot, Monitor, ArrowRight, Trophy } from 'lucide-react';
+import { ExternalLink, Github, Code, Zap, Globe, Music, Dumbbell, Users, Monitor, ArrowRight, Trophy, Bot, Search } from 'lucide-react';
+
 
 const ProjectsShowcase = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -8,6 +9,29 @@ const ProjectsShowcase = () => {
   const projects = [
     {
       id: 1,
+      name: "WhyNotHireMe",
+      description: "AI-powered resume analysis and hiring transparency system. Analyzes resumes against job descriptions, calculates semantic match score, identifies skill gaps, and sends personalised rejection emails with real feedback directly to candidates.",
+      skills: ["Python", "FastAPI", "NLP", "Next.js", "PostgreSQL", "SendGrid"],
+      icon: <Bot className="w-8 h-8" />,
+      gradient: "from-yellow-400 via-lime-400 to-green-400",
+      liveDemo: "https://whynothireme.vercel.app",
+      github: "https://github.com/uzma-a/WhyNotHireMe",
+      category: "AI Application"
+    },
+    {
+      id: 2,
+      name: "TruthLens",
+      description: "AI-powered fake news detector that analyzes articles and headlines for credibility using NLP models, providing transparency scores and source verification.",
+      skills: ["Python", "NLP", "React.js", "FastAPI"],
+      icon: <Search className="w-8 h-8" />,
+      gradient: "from-red-400 via-orange-400 to-yellow-400",
+      liveDemo: "https://fakenews-detector-ai.vercel.app/",
+      github: "https://github.com/uzma-a/fake-news-detector",
+      category: "AI Application"
+    },
+
+    {
+      id: 3,
       name: "House Price Prediction",
       description: "End-to-end regression model using PyTorch on real Kaggle dataset with complete ML workflow—data preprocessing, feature scaling, custom Dataset & DataLoader, training loop, and model persistence.",
       skills: ["Python", "PyTorch", "NumPy", "Pandas", "Kaggle"],
@@ -17,7 +41,7 @@ const ProjectsShowcase = () => {
       category: "Machine Learning"
     },
     {
-      id: 2,
+      id: 4,
       name: "PrescriptionDecoder AI",
       description: "AI-powered medical prescription decoder that turns confusing prescriptions into clear, understandable guidance using Gemini API and deployed on Cloud Run.",
       skills: ["Gemini API", "Cloud Run", "AI Studio", "Python"],
@@ -28,7 +52,7 @@ const ProjectsShowcase = () => {
       category: "AI Application"
     },
     {
-      id: 3,
+      id: 5,
       name: "MockMate",
       description: "AI-driven technical interview practice platform with real-time voice interaction, intelligent feedback system using Gemini 2.5 Flash, and full-stack architecture.",
       skills: ["Django", "React.js", "Gemini 2.5", "pyttsx3", "Bootstrap"],
@@ -39,7 +63,7 @@ const ProjectsShowcase = () => {
       category: "Full Stack"
     },
     {
-      id: 4,
+      id: 6,
       name: "Study Buddy",
       description: "Personal AI-powered notes and quiz generator that creates summaries, quizzes, and interactive learning materials using Gemini API with PDF export functionality.",
       skills: ["React.js", "Gemini API", "Clerk Auth", "jsPDF", "Context API"],
@@ -50,7 +74,7 @@ const ProjectsShowcase = () => {
       category: "Frontend"
     },
     {
-      id: 5,
+      id: 7,
       name: "Slice-Hub Pizza",
       description: "Full-stack pizza ordering platform with interactive frontend, MySQL database, and integrated Razorpay payment gateway for seamless order management.",
       skills: ["React.js", "MySQL", "Razorpay", "Payment Gateway"],
@@ -61,7 +85,7 @@ const ProjectsShowcase = () => {
       category: "Full Stack"
     },
     {
-      id: 6,
+      id: 8,
       name: "FitHub",
       description: "Modern gym website built with MERN stack featuring membership plans, user registration, appointment booking system, and responsive TailwindCSS design.",
       skills: ["MongoDB", "Express.js", "React.js", "Node.js", "TailwindCSS"],
@@ -72,7 +96,7 @@ const ProjectsShowcase = () => {
       category: "Full Stack"
     },
     {
-      id: 7,
+      id: 9,
       name: "Eventify",
       description: "Event management platform with secure JWT authentication, OTP verification, ticket booking system, and full-stack MERN implementation.",
       skills: ["MongoDB", "Express.js", "React.js", "JWT Auth", "TailwindCSS"],
@@ -96,16 +120,16 @@ const ProjectsShowcase = () => {
     }
   };
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
     : projects.filter(p => p.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white p-4 md:p-8 relative overflow-hidden">
-      
+
       {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
+
       {/* Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
@@ -129,11 +153,10 @@ const ProjectsShowcase = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                selectedCategory === category
+              className={`px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${selectedCategory === category
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/50 scale-105'
                   : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white'
-              }`}
+                }`}
             >
               {category}
             </button>

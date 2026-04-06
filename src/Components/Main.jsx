@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Github, Linkedin, Mail, ExternalLink, Code, Sparkles, Briefcase, Award, BookOpen } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Code, Sparkles, Briefcase, Brain, Rocket } from 'lucide-react';
 import { SiKaggle } from "react-icons/si";
-
 
 const Main = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -9,13 +8,12 @@ const Main = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   const roles = [
-    'Machine Learning Engineer (PyTorch)',
+    'AI Application Builder',
+    'Machine Learning Engineer',
     'Full Stack Developer (React + Python)',
     'Kaggle ML Practitioner',
-    'UI-Focused Problem Solver'
   ];
 
-  // Typewriter effect
   useEffect(() => {
     const currentText = roles[currentRole];
     let index = 0;
@@ -27,7 +25,6 @@ const Main = () => {
       } else {
         clearInterval(typeInterval);
         setIsTyping(false);
-
         setTimeout(() => {
           setIsTyping(true);
           setCurrentRole((prev) => (prev + 1) % roles.length);
@@ -51,7 +48,7 @@ const Main = () => {
   const socialLinks = [
     {
       icon: <Github className="w-5 h-5" />,
-      href: "https://github.com/uzmaaasia",
+      href: "https://github.com/uzma-a",
       label: "GitHub",
       color: "hover:bg-gray-700"
     },
@@ -75,21 +72,32 @@ const Main = () => {
     }
   ];
 
-  const skills = [
-    { icon: <Code className="w-5 h-5" />, title: "ML & PyTorch", desc: "Deep Learning Models" },
-    { icon: <Briefcase className="w-5 h-5" />, title: "Full Stack", desc: "React + Python" },
-    { icon: <Award className="w-5 h-5" />, title: "Kaggle", desc: "Data Science" }
+  const highlights = [
+    {
+      icon: <Brain className="w-5 h-5" />,
+      title: "AI & ML",
+      desc: "NLP · HuggingFace · PyTorch"
+    },
+    {
+      icon: <Briefcase className="w-5 h-5" />,
+      title: "Full Stack",
+      desc: "React · Next.js · FastAPI · PostgreSQL"
+    },
+    {
+      icon: <Rocket className="w-5 h-5" />,
+      title: "Shipped & Deployed",
+      desc: "WhyNotHireMe · TruthLens · MockMate"
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-      
-      {/* Hero Section */}
-      <div className="min-h-screen flex  justify-center p-4 relative overflow-hidden">
-        
-        {/* Animated Grid Background */}
+
+      <div className="min-h-screen flex justify-center p-4 relative overflow-hidden">
+
+        {/* Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
+
         {/* Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
@@ -113,22 +121,21 @@ const Main = () => {
           ))}
         </div>
 
-        {/* Main Content Card */}
+        {/* Main Content */}
         <div className="relative z-10 max-w-8xl w-full">
           <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl shadow-2xl p-8 md:p-8 transition-all duration-500 hover:border-white/20">
-            
+
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-              
-              {/* Left Side - Text Content */}
+
+              {/* Left — Text */}
               <div className="text-center md:text-left md:w-1/2 space-y-8">
-                
+
                 {/* Greeting */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 justify-center md:justify-start">
                     <Sparkles className="w-6 h-4 text-yellow-400 animate-pulse" />
                     <span className="text-lg text-gray-400 font-medium">Hello, I'm</span>
                   </div>
-
                   <h1 className="text-4xl md:text-6xl font-black leading-tight">
                     <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
                       Uzma Aasiya
@@ -136,24 +143,22 @@ const Main = () => {
                   </h1>
                 </div>
 
-                {/* Role with Typewriter */}
+                {/* Typewriter */}
                 <div className="space-y-4">
-                  <p className="text-xl text-gray-400 font-medium">
-                    A Creative and Passionate
-                  </p>
-                  <div className="text-2xl md:text-2xl font-bold text-cyan-400 h-8 flex items-center justify-center md:justify-start">
+                  <p className="text-xl text-gray-400 font-medium">A Creative and Passionate</p>
+                  <div className="text-2xl font-bold text-cyan-400 h-8 flex items-center justify-center md:justify-start">
                     {displayText}
                     {isTyping && <span className="animate-pulse ml-1">|</span>}
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-400 text-base md:text-md max-w-2xl leading-relaxed">
-                  I build intelligent, data-driven applications using
-                  <span className="text-cyan-400 font-semibold"> PyTorch, Machine Learning, and Python</span>,
-                  combined with modern web technologies like
-                  <span className="text-purple-400 font-semibold"> React & Tailwind</span>.
-                  Passionate about real-world datasets, clean code, and production-ready projects.
+                <p className="text-gray-400 text-base max-w-2xl leading-relaxed">
+                  I build{' '}
+                  <span className="text-cyan-400 font-semibold">AI-powered applications</span> and{' '}
+                  <span className="text-purple-400 font-semibold">full-stack products</span> that solve
+                  real problems — from NLP-based resume analyzers to fake news detectors — using Python,
+                  FastAPI, React, and modern ML tools.
                 </p>
 
                 {/* CTA Buttons */}
@@ -192,9 +197,9 @@ const Main = () => {
                 </div>
               </div>
 
-              {/* Right Side - Skills Cards */}
+              {/* Right — Highlight Cards */}
               <div className="md:w-1/2 flex flex-col gap-4">
-                {skills.map((skill, index) => (
+                {highlights.map((item, index) => (
                   <div
                     key={index}
                     className="group backdrop-blur-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:bg-white/10"
@@ -202,13 +207,13 @@ const Main = () => {
                   >
                     <div className="flex items-center gap-4">
                       <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                        {skill.icon}
+                        {item.icon}
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                          {skill.title}
+                          {item.title}
                         </h3>
-                        <p className="text-gray-500 text-sm">{skill.desc}</p>
+                        <p className="text-gray-500 text-sm">{item.desc}</p>
                       </div>
                     </div>
                   </div>
@@ -226,8 +231,6 @@ const Main = () => {
         </div>
 
       </div>
-
-  
     </div>
   );
 };
